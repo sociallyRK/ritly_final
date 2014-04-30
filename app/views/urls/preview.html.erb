@@ -1,1 +1,6 @@
-hello world
+<h1>Preview of Link</h1>
+
+<h3><%= @object.title %></h3>
+<%= image_tag "#{@object.images.first.source_url}", :class => "preview_image"%></br>
+
+<%= link_to "Go to Link", "/go/#{@url.random_string}", :class => "btn btn-primary btn-sm "%>

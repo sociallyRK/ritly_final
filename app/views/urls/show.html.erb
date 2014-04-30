@@ -1,5 +1,13 @@
-<h1><%= @url.random_string%> is your code for <%= @url.link %></h1>
+<h1><%= link_to @url.random_string, @url.link %> is your code for <%= @url.link %></h1>
+
+
 
 <!-- <p>You can direct users to this Ritly URL: <%= link_to @full_path %></p>
  -->
-<p>The Ritly URL will redirect them to: <%= link_to @url.link, @url.link %></p>
+<p>The Ritly URL will redirect them to: <%= link_to @url.link, @url.link %></p> 
+<p>You can direct users to this Ritly URL: <%= link_to @full_path, 
+@full_path %></p>
+
+
+<p> Here is a preview: </p>
+<img src=<%= @api_link %> alt="No Image Available">

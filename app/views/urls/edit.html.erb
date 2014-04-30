@@ -1,0 +1,11 @@
+<h1>Edit Your Ritly: </h1></br>
+<h2><%= @url.random_string %></h2>
+
+<%= form_for @url do |f| %>
+
+	<%= label_tag(:link, "Link") %>
+	<%= f.text_field :link, :class => "form-horizontal edit" %></br>
+
+	<%= f.submit "Update URL", :class => "btn btn-primary btn-sm" %>
+
+<% end %>

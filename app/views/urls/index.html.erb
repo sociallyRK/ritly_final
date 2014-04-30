@@ -1,0 +1,25 @@
+<h1>Ritly Index Page!</h1>
+
+  <div class="table-responsive">
+		<table class="table table-hover">
+			<tr>
+				<th>Link</th>
+				<th>Random Ritly</th>
+				<th>Edit</th>
+				<th>Delete</th>
+				<th>Visits</th>
+			</tr>
+
+			<% @urls.each do |url| %>
+				<tr>
+					<td><%= link_to url.link, url_path(url.id) %></td>
+					<td><%= url.random_string %></td>
+					<td><%= link_to "Edit", edit_url_path(url.id) %></td>
+					<td><%= link_to "Delete", url, method: :delete, data: {confirm: "R U Sure?"} %></td>
+					<td><%= url.visit_count %></td>
+				</tr>
+		  <% end %>
+		</table>
+	</div>	
+
+<%= link_to "New Ritly", new_url_path, :class => "btn btn-primary"  %>
